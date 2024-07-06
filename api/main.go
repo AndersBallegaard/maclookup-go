@@ -156,8 +156,6 @@ func main() {
     loadOUIs("http://standards-oui.ieee.org/oui28/mam.csv", &OUIBST)
     loadOUIs("http://standards-oui.ieee.org/oui36/oui36.csv", &OUIBST)
     
-    
-
     router := gin.Default()
     router.GET("/lookup", MacLookupWrapper(&OUIBST))
 
